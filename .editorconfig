@@ -1,0 +1,26 @@
+root = true
+
+# 全仓库统一：UTF-8 无 BOM、LF、文件末尾保留空行、去掉行尾空白
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# 配置与说明类文件
+[*.{md,markdown,yml,yaml,json,toml}]
+indent_size = 2
+
+# Windows 脚本
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+
+# Makefile 必须使用 Tab
+[Makefile]
+indent_style = tab
+
+# C / C++ / Python 使用 4 空格（与 .clang-format / PEP 8 对齐）
+[*.{c,h,cpp,hpp,cc,py}]
+indent_size = 4

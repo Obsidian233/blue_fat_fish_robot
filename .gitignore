@@ -1,0 +1,135 @@
+# ============================================================
+# Blue Fat Fish Robot / ROBOMINI 2027 团队仓库
+# 只跟踪源码、文档、图纸与必要的小体积素材。
+# 分类：操作系统 → 编辑器 → 构建产物 → 工具链 → CAD → 临时与敏感文件
+# 规则修改前请先阅读 CONTRIBUTING.md，避免误忽略交付文件。
+# ============================================================
+
+# ---------- 操作系统 ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+$RECYCLE.BIN/
+*.lnk
+
+# ---------- 编辑器 / IDE ----------
+# 个人环境配置不提交；需要共享的工程配置请评审后再入库
+.vscode/
+.idea/
+.vs/
+.history/
+.clangd/
+*.iml
+*.swp
+*.swo
+*.user
+*.suo
+*~
+.cache/
+
+# ---------- 通用构建产物 ----------
+build/
+build-*/
+cmake-build-*/
+out/
+output/
+outputs/
+dist/
+.cmake/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.elf
+*.axf
+*.map
+*.pdb
+*.ilk
+*.exp
+*.d
+*.dep
+*.lst
+*.crf
+*.lnp
+*.iex
+*.plg
+*.build_log.htm
+*.scvd
+compile_commands.json
+
+# ---------- 嵌入式工具链 ----------
+# Keil MDK：保留 .uvprojx 工程文件；以下为个人/临时文件
+*.uvguix.*
+JLinkLog.txt
+Objects/
+Listings/
+# STM32CubeIDE：.project / .cproject 需要提交，以下不提交
+.metadata/
+.settings/
+RemoteSystemsTempFiles/
+*.launch
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# ---------- Python / 视觉算法 ----------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+htmlcov/
+.coverage
+coverage.xml
+# 训练、仿真与日志输出（可重新生成）
+runs/
+logs/
+*.log
+# 例外：tests/ 下的测试日志属于考核证据，需要入库
+!tests/**/*.log
+
+# ---------- 机械 / CAD ----------
+# 临时、备份与锁文件
+*.bak
+*.tmp
+*.dwl
+*.dwl2
+*.lck
+~$*
+# FreeCAD 备份
+*.FCStd1
+# SolidWorks 本地生成文件
+*.sldprt.bak*
+
+# ---------- 文档 / Office 临时文件 ----------
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+.~lock.*
+
+# ---------- 媒体临时文件 ----------
+media/**/*.tmp
+media/**/*.part
+
+# ---------- 敏感信息与本地配置（公开仓库，严禁入库）----------
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials*
