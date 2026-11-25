@@ -1,0 +1,123 @@
+# ============================================================
+# 换行与二进制文件处理策略（跨 Windows / macOS / Linux 协作）
+# 仓库内文本统一以 LF 存储；检出到磁盘时的换行由 eol 决定。
+# 修改本文件会影响所有人的检出结果，改动前请在群里同步。
+# ============================================================
+
+# 默认：自动识别文本并统一为 LF
+* text=auto eol=lf
+
+# ---------- 明确为文本 ----------
+*.md            text eol=lf
+*.markdown      text eol=lf
+*.txt           text eol=lf
+*.rst           text eol=lf
+*.csv           text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+*.json          text eol=lf
+*.toml          text eol=lf
+*.ini           text eol=lf
+*.cfg           text eol=lf
+*.conf          text eol=lf
+*.py            text eol=lf
+*.c             text eol=lf
+*.h             text eol=lf
+*.cpp           text eol=lf
+*.hpp           text eol=lf
+*.cc            text eol=lf
+*.ino           text eol=lf
+*.cmake         text eol=lf
+CMakeLists.txt  text eol=lf
+*.sh            text eol=lf
+*.urdf          text eol=lf
+*.xml           text eol=lf
+*.launch        text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+.editorconfig   text eol=lf
+
+# ---------- Windows 脚本保持 CRLF ----------
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# ---------- 二进制：禁止换行转换与文本 Diff ----------
+# 图片
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.bmp   binary
+*.webp  binary
+*.tif   binary
+*.tiff  binary
+*.ico   binary
+*.psd   binary
+# 文档
+*.pdf   binary
+*.doc   binary
+*.docx  binary
+*.xls   binary
+*.xlsx  binary
+*.ppt   binary
+*.pptx  binary
+# CAD / 三维模型
+*.sldprt binary
+*.sldasm binary
+*.slddrw binary
+*.SLDPRT binary
+*.SLDASM binary
+*.SLDDRW binary
+*.easm   binary
+*.edrw   binary
+*.drwdot binary
+*.step   binary
+*.stp    binary
+*.stl    binary
+*.iges   binary
+*.igs    binary
+*.x_t    binary
+*.x_b    binary
+*.3mf    binary
+*.f3d    binary
+*.FCStd  binary
+*.dwg    binary
+*.dxf    binary
+# 音视频
+*.mp4   binary
+*.mov   binary
+*.avi   binary
+*.mkv   binary
+*.wmv   binary
+*.flv   binary
+*.webm  binary
+*.m4v   binary
+*.mp3   binary
+*.wav   binary
+*.flac  binary
+*.m4a   binary
+*.ogg   binary
+# 压缩包 / 固件 / 模型权重
+*.zip   binary
+*.7z    binary
+*.rar   binary
+*.gz    binary
+*.tar   binary
+*.bin   binary
+*.hex   binary
+*.s19   binary
+*.onnx  binary
+*.pt    binary
+*.pth   binary
+*.pb    binary
+*.engine binary
+*.h5    binary
+*.tflite binary
+*.safetensors binary
+*.ckpt  binary
+*.npy   binary
+*.npz   binary
+*.pkl   binary
+*.db    binary
+*.sqlite binary
